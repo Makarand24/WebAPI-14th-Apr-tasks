@@ -1,0 +1,13 @@
+<button (click)="getallbookdetails()">Book details</button>
+<table *ngIf="array2"border="solid black" style="border-color:black; background-color:azure;" cellpadding="10px">
+    <tr>
+        <th>BOOK_ID</th>
+        <th>AUTHOR_ID</th>
+        <th>BOOK_NAME</th>
+    </tr>
+    <tr *ngFor="let i of array2">
+        <td>{{i.bid}}</td>
+        <td>{{i.aid}}</td>
+        <td>{{i.bname}}</td>
+    </tr>
+</table>

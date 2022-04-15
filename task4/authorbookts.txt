@@ -1,0 +1,26 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { Component, OnInit } from '@angular/core';
+import { Author } from 'src/Models/author';
+import { Bookdetails } from 'src/Models/book';
+import { AubookService } from '../service/aubook.service';
+
+@Component({
+  selector: 'app-author-book-det',
+  templateUrl: './author-book-det.component.html',
+  styleUrls: ['./author-book-det.component.css']
+})
+export class AuthorBookDetComponent implements OnInit {
+array1:Author[];
+array2:Bookdetails[];
+  constructor(private service:AubookService) { }
+
+  ngOnInit(): void {
+  }
+  getallauthordetails(){
+    this.service.getAuthorDetails().subscribe(res=>(this.array1=res));
+  }
+  getallbookdetails(){
+    this.service.getBookDetails().subscribe(res=>(this.array2=res));
+  }
+}

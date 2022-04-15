@@ -1,0 +1,8 @@
+<p>login works!</p>
+
+<label>enter username:</label>
+<input type="text" [(ngModel)]="username" name="t1" <br>
+<label>enter role:</label>
+<input type="text" [(ngModel)]="role" name="t2" <br>
+<button (click)="passvaluetoHome()">LOGIN</button>
+<app-home [name]="passnametoHome" [ROLE]="passroletoHome"><app-home>

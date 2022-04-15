@@ -1,0 +1,13 @@
+<button (click)="getallauthordetails()">Author details</button>
+<table *ngIf="array1" border="solid black" style="border-color:black; background-color:azure;" cellpadding="10px">
+    <tr>
+        <th>Author_Id</th>
+        <th>Author_Name</th>
+        <th>Author_Address</th>
+    </tr>
+    <tr *ngFor="let i of array1">
+        <td>{{i.id}}</td>
+        <td>{{i.aname}}</td>
+        <td>{{i.addr}}</td>
+    </tr>
+</table>
