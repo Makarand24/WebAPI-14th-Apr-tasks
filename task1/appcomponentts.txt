@@ -1,0 +1,97 @@
+
+export class AppComponent {
+  title = 'APP1'
+ arr1:Customer[]=new Array();
+ arr2:Order[]=new Array();
+
+ display()
+ {
+   let str1=new Customer();
+   str1.cid=1;
+   str1.cname="aaa";
+   str1.contactno=1983173913;
+   str1.caddr="Bangalore";
+
+   let str2=new Customer();
+   str2.cid=2;
+   str2.cname="bbb";
+   str2.contactno=987999877;
+   str2.caddr="Chennai";
+   
+   let str3=new Customer();
+   str3.cid=3;
+   str3.cname="ccc";
+   str3.contactno=9877545487;
+   str3.caddr="Hydrabad";
+   
+   let str4=new Customer();
+   str4.cid=4;
+   str4.cname="ddd";
+   str4.contactno=9878846554;
+   str4.caddr="Pune";
+   
+   let str5=new Customer();
+   str5.cid=5;
+   str5.cname="ddd";
+   str5.contactno=9758521655;
+   str5.caddr="Mumbai";
+
+   this.arr1.push(str1);
+   this.arr1.push(str2);
+   this.arr1.push(str3);
+   this.arr1.push(str4);
+   this.arr1.push(str5);
+   
+ }
+
+ display2(){
+   let str1=new Order();
+   str1.orid=12452;
+   str1.ordate="05/5/2001"
+   str1.cid=1;
+   str1.ordelivery="09/05/2021";
+
+   let str2=new Order();
+   str2.orid=46568;
+   str2.ordate="01/08/2021"
+   str2.cid=2;
+   str2.ordelivery="09/08/2021";
+
+   let str3=new Order();
+   str3.orid=65412;
+   str3.ordate="25/02/2021"
+   str3.cid=3;
+   str3.ordelivery="28/02/2021";
+
+   let str4=new Order();
+   str4.orid=71363;
+   str4.ordate="01/03/2001"
+   str4.cid=4;
+   str4.ordelivery="05/03/2021";
+
+   let str5=new Order();
+   str5.orid=21455;
+   str5.ordate="20/06/2021"
+   str5.cid=1;
+   str5.ordelivery="20/06/2021";
+   this.arr2.push(str1);
+   this.arr2.push(str2);
+   this.arr2.push(str3);
+   this.arr2.push(str4);
+   this.arr2.push(str5);
+   
+ }
+}
+class Customer
+{
+  cid:number;
+  cname:string;
+  contactno:number;
+  caddr:string;
+}
+class Order{
+  orid:number;
+  ordate:string;
+  cid:number;
+  ordelivery:string;
+}

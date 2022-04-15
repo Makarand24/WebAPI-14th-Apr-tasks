@@ -1,0 +1,42 @@
+<h1>Customer Detail and Order Details</h1>
+<button (click)="display()">Customer details</button>
+<button (click)="display2()">Order details</button>
+<table border="2px" cell padding="20px">
+    <tr>
+        <th>Customer id</th>
+        <th>Customer Name</th>
+        <th>Customer contactno</th>
+        <th>Customer address</th>
+    </tr>
+    <tr *ngFor="let i of arr1">
+        <td>{{i.cid}}</td>
+        <td>{{i.cname}}</td>
+        <td>{{i.contactno}}</td>
+        <td>{{i.caddr}}</td>
+        
+
+    </tr>
+
+</table>
+<br>
+<br>
+
+    <table border="2px" cell padding="20px">
+      
+        <tr >
+            <th>Order id</th>
+            <th>Order Date</th>
+            <th>Customer id</th>
+            <th>Order Delivery</th>
+        </tr>
+   
+    <tr *ngFor="let i of arr2">
+        <td>{{i.orid}}</td>
+        <td>{{i.ordate}}</td>
+        <td>{{i.cid}}</td>
+        <td>{{i.ordelivery}}</td>
+        
+
+    </tr>
+
+</table>
